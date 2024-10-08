@@ -4,6 +4,7 @@ function preload() {
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
+  background("lightpink");
   // put setup code here
   const message =
     "This is a template repository\nfor the course Laboratorio di Computergrafica\nCommunication Design, Politecnico di Milano";
