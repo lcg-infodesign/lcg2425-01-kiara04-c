@@ -5,37 +5,33 @@ function preload() {
 function setup() {
   noLoop();
   createCanvas(windowWidth, windowHeight);
-  background("lightblue");
-  // put setup code here
-  const message =
-    "This is a template repository\nfor the course Laboratorio di Computergrafica\nCommunication Design, Politecnico di Milano";
-  textAlign(CENTER, CENTER);
-  textSize(16);
-  text(message, width / 2, height / 2);
 }
 
 function draw() {
   // put drawing code here
   background("white");
   noStroke();
+  fill (248,114,139,190);
 
-  let r=random(12,69,108);
-  let g=random(2,110,110);
-  let b=random(29,162,157);
+  let larghezza=40;
+  let altezza=120;
+  let oGutter=1;
+  let vGutter=5;
 
-  fill(r,g,b);
-
-  let altezza=random(10,40);
-  let larghezza=random(10,40);
-  let gutter=5;
-  let rows=windowHeight/(altezza+gutter);
-  let columns=windowWidth/(larghezza+gutter);
+  let columns=windowWidth/(larghezza+oGutter);
+  let rows=windowHeight/(altezza+vGutter);
 
   for(let i=0; i<columns; i++){
     for(let j=0; j<rows; j++){
-      let xPos=i*(larghezza + gutter);
-      let yPos=j*(altezza + gutter);
+
+      //2.5 è la metà della distanza trai quadratini
+      //in orizzontale per x e in verticale per y
+      let xPos=i*(larghezza+oGutter);
+      let yPos=j*(altezza + vGutter) + random (-20,20);
       rect(xPos, yPos, larghezza, altezza);
-    }
-}
+    }  
+  }
+
+  fill("black");
+  text ("Vera Molnar, Untitled, 1985. Courtesy of The Anne and Michael Spalter Digital Art Collection", 20, windowHeight-20);
 }
