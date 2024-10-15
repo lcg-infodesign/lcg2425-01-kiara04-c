@@ -24,9 +24,9 @@ function draw() {
   for(let i=0; i<columns; i++){
     for(let j=0; j<rows; j++){
 
-      //2.5 è la metà della distanza trai quadratini
+      //metà della distanza trai quadratini
       //in orizzontale per x e in verticale per y
-      let xPos=i*(larghezza+oGutter);
+      let xPos=i*(larghezza + oGutter);
       let yPos=j*(altezza + vGutter) + random (-20,20);
       rect(xPos, yPos, larghezza, altezza);
     }  
