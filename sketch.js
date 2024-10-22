@@ -32,6 +32,7 @@ function draw() {
       rect(xPos, yPos, larghezza, altezza);
     }
   }
+    
 
   fill("black");
   text ("Vera Molnar, Untitled, 1985. Courtesy of The Anne and Michael Spalter Digital Art Collection", 20, windowHeight-20);
